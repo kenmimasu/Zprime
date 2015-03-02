@@ -1,0 +1,21 @@
+1500.000d0,1548.541d0,1580.915d0,2121.320d0,2123.713d0,0.d0,0.d0,0.d0,0.d0,0.d0       ! Z prime mass 
+1.d0,1.d0,1.d0,1.d0,1.d0,1.d0,1.d0,1.d0,1.d0,1.d0        ! gauge coupling
+0.d0,0.d0,0.d0,0.d0,0.d0,0.d0,0.d0,0.d0,0.d0,0.d0        ! param  
+0.000d0,0.035d0,-0.058d0,0.000d0,-0.004d0,-0.548d0,-0.315d0,0.118d0,0.000d0,0.023d0   ! vector coupling of up type quark
+0.000d0,-0.026d0,-0.052d0,0.000d0,-0.010d0,0.017d0,0.256d0,0.105d0,0.000d0,0.046d0        ! axial coupling of up type quark
+0.000d0,-0.004d0,0.055d0,0.000d0,0.007d0,-0.269d0,-0.058d0,-0.129d0,0.000d0,0.001d0   ! vector coupling of down type quark
+0.000d0,0.026d0,0.052d0,0.000d0,0.010d0,-0.283d0,-0.041d0,-0.131d0,0.000d0,0.004d0        ! axial coupling of down type quark
+0.000d0,0.035d0,-0.058d0,0.000d0,-0.004d0,-0.548d0,-0.315d0,0.118d0,0.000d0,0.023d0   ! vector coupling of up type quark
+0.000d0,-0.026d0,-0.052d0,0.000d0,-0.010d0,0.017d0,0.256d0,0.105d0,0.000d0,0.046d0        ! axial coupling of up type quark
+0.000d0,-0.004d0,0.055d0,0.000d0,0.007d0,-0.269d0,-0.058d0,-0.129d0,0.000d0,0.001d0   ! vector coupling of down type quark
+0.000d0,0.026d0,0.052d0,0.000d0,0.010d0,-0.283d0,-0.041d0,-0.131d0,0.000d0,0.004d0        ! axial coupling of down type quark
+0.000d0,-0.065d0,0.060d0,0.000d0,0.001d0,0.d0,0.d0,0.d0,0.d0,0.d0       ! vector coupling of electron
+0.000d0,0.026d0,0.052d0,0.000d0,0.010d0,0.d0,0.d0,0.d0,0.d0,0.d0        ! axial coupling of electron
+0.000d0,-0.026d0,-0.052d0,0.000d0,-0.010d0,0.d0,0.d0,0.d0,0.d0,0.d0        ! vector coupling of neutrino
+0.000d0,-0.026d0,-0.052d0,0.000d0,-0.010d0,0.d0,0.d0,0.d0,0.d0,0.d0                ! axial coupling of neutrino
+0.000d0,-0.065d0,0.060d0,0.000d0,0.001d0,0.d0,0.d0,0.d0,0.d0,0.d0       ! vector coupling of electron
+0.000d0,0.026d0,0.052d0,0.000d0,0.010d0,0.d0,0.d0,0.d0,0.d0,0.d0        ! axial coupling of electron
+0.000d0,-0.026d0,-0.052d0,0.000d0,-0.010d0,0.d0,0.d0,0.d0,0.d0,0.d0        ! vector coupling of neutrino
+0.000d0,-0.026d0,-0.052d0,0.000d0,-0.010d0,0.d0,0.d0,0.d0,0.d0,0.d0                ! axial coupling of neutrino
+!##########################################################
+! 4DMHC model file created  Fri Oct 19 19:09:23 2012 

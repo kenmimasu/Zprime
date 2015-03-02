@@ -1,0 +1,20 @@
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! Z prime mass
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! gauge coupling g'
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! angle parametrising the mixing between Z's
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of up type quark
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of up type quark
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of down type quark
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of down type quark
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of top type quark
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of top type quark
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of bottom type quark
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of bottom type quark
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of electron
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of electron
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of neutrino
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of neutrino
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of tau
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of tau
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of tau neutrino
+0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of tau neutrino
+!SM model file for ffbarMultiZp3G created Mon Jan 19 14:49:45 2015

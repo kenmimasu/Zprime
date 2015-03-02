@@ -1,0 +1,20 @@
+2000d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0         ! Z prime mass
+0.760d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! gauge coupling g'
+-0.23d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! angle parametrising the mixing between Z's
+0.193d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of up type quark
+0.500d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of up type quark
+-0.347d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of down type quark
+-0.500d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of down type quark
+0.193d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of top quark
+0.500d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of top quark
+-0.347d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of bottom quark
+-0.500d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of bottom quark
+-0.039d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of electron
+-0.500d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of electron
+0.500d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of neutrino
+0.500d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of neutrino
+-0.039d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of tau
+-0.500d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of tau
+0.500d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of tau neutrino
+0.500d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of tau neutrino
+!GSM-SM model file created Mon Feb  2 16:45:12 2015

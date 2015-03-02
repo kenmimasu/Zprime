@@ -1,0 +1,16 @@
+173d0 ! rmt
+5d0 ! rmb
+81d0 ! rmW 
+91d0 ! rmH
+1d0 ! Dgvu
+1d0 ! Dgau
+1d0 ! Dgvd
+1d0 ! Dgad
+1d0 ! Dgve
+1d0 ! Dgae
+1d0 ! Dgvn
+1d0 ! Dgan
+1d0 ! Dgvt
+1d0 ! Dgat
+1d0 ! Dgvb
+1d0 ! Dgab
