@@ -1,14 +1,14 @@
-multirun.py -f 2 -t "_x25_y2-5_SQ"  -y 2.5 -m 2 -d    -r 200:500   -Q "-1.0" bin/ffbarMultiZp3G 500000 13000 0 E6-chi_m1500w80
-multirun.py -f 2 -t "_x25_y2-5_INT" -y 2.5 -m 1 -d -e -r 200:500   -Q "-1.0" bin/ffbarMultiZp3G 500000 13000 0 E6-chi_m1500w80
-multirun.py -f 2 -t "_x25_y2-5_SQ"  -y 2.5 -m 2 -d    -r 500:1000  -Q "-1.0" bin/ffbarMultiZp3G 500000 13000 0 E6-chi_m1500w80
-multirun.py -f 2 -t "_x25_y2-5_INT" -y 2.5 -m 1 -d -e -r 500:1000  -Q "-1.0" bin/ffbarMultiZp3G 500000 13000 0 E6-chi_m1500w80
-multirun.py -f 2 -t "_x25_y2-5_SQ"  -y 2.5 -m 2 -d    -r 1000:2000 -Q "-1.0" bin/ffbarMultiZp3G 500000 13000 0 E6-chi_m1500w80
-multirun.py -f 2 -t "_x25_y2-5_INT" -y 2.5 -m 1 -d -e -r 1000:2000 -Q "-1.0" bin/ffbarMultiZp3G 500000 13000 0 E6-chi_m1500w80
-multirun.py -f 2 -t "_x25_y2-5_SQ"  -y 2.5 -m 2 -d    -r 2000:3000 -Q "-1.0" bin/ffbarMultiZp3G 500000 13000 0 E6-chi_m1500w80
-multirun.py -f 2 -t "_x25_y2-5_INT" -y 2.5 -m 1 -d -e -r 2000:3000 -Q "-1.0" bin/ffbarMultiZp3G 500000 13000 0 E6-chi_m1500w80
-multirun.py -f 2 -t "_x25_y2-5_SQ"  -y 2.5 -m 2 -d    -r 3000:4000 -Q "-1.0" bin/ffbarMultiZp3G 500000 13000 0 E6-chi_m1500w80
-multirun.py -f 2 -t "_x25_y2-5_INT" -y 2.5 -m 1 -d -e -r 3000:4000 -Q "-1.0" bin/ffbarMultiZp3G 500000 13000 0 E6-chi_m1500w80
-multirun.py -f 2 -t "_x25_y2-5_SQ"  -y 2.5 -m 2 -d    -r 4000:5000 -Q "-1.0" bin/ffbarMultiZp3G 500000 13000 0 E6-chi_m1500w80
-multirun.py -f 2 -t "_x25_y2-5_INT" -y 2.5 -m 1 -d -e -r 4000:5000 -Q "-1.0" bin/ffbarMultiZp3G 500000 13000 0 E6-chi_m1500w80
-multirun.py -f 2 -t "_x25_y2-5_SQ"  -y 2.5 -m 2 -d    -r 5000:6000 -Q "-1.0" bin/ffbarMultiZp3G 500000 13000 0 E6-chi_m1500w80
-multirun.py -f 2 -t "_x25_y2-5_INT" -y 2.5 -m 1 -d -e -r 5000:6000 -Q "-1.0" bin/ffbarMultiZp3G 500000 13000 0 E6-chi_m1500w80
+multirun.py -f 2 -t "_x25_y2-5_SQ"  -y 2.5 -m 2 -d    -r 200:500   -Q "-1.0" bin/ffbarRead 500000 13000 0 E6-chi_m1500w80
+multirun.py -f 2 -t "_x25_y2-5_INT" -y 2.5 -m 1 -d -e -r 200:500   -Q "-1.0" bin/ffbarRead 500000 13000 0 E6-chi_m1500w80
+multirun.py -f 2 -t "_x25_y2-5_SQ"  -y 2.5 -m 2 -d    -r 500:1000  -Q "-1.0" bin/ffbarRead 500000 13000 0 E6-chi_m1500w80
+multirun.py -f 2 -t "_x25_y2-5_INT" -y 2.5 -m 1 -d -e -r 500:1000  -Q "-1.0" bin/ffbarRead 500000 13000 0 E6-chi_m1500w80
+multirun.py -f 2 -t "_x25_y2-5_SQ"  -y 2.5 -m 2 -d    -r 1000:2000 -Q "-1.0" bin/ffbarRead 500000 13000 0 E6-chi_m1500w80
+multirun.py -f 2 -t "_x25_y2-5_INT" -y 2.5 -m 1 -d -e -r 1000:2000 -Q "-1.0" bin/ffbarRead 500000 13000 0 E6-chi_m1500w80
+multirun.py -f 2 -t "_x25_y2-5_SQ"  -y 2.5 -m 2 -d    -r 2000:3000 -Q "-1.0" bin/ffbarRead 500000 13000 0 E6-chi_m1500w80
+multirun.py -f 2 -t "_x25_y2-5_INT" -y 2.5 -m 1 -d -e -r 2000:3000 -Q "-1.0" bin/ffbarRead 500000 13000 0 E6-chi_m1500w80
+multirun.py -f 2 -t "_x25_y2-5_SQ"  -y 2.5 -m 2 -d    -r 3000:4000 -Q "-1.0" bin/ffbarRead 500000 13000 0 E6-chi_m1500w80
+multirun.py -f 2 -t "_x25_y2-5_INT" -y 2.5 -m 1 -d -e -r 3000:4000 -Q "-1.0" bin/ffbarRead 500000 13000 0 E6-chi_m1500w80
+multirun.py -f 2 -t "_x25_y2-5_SQ"  -y 2.5 -m 2 -d    -r 4000:5000 -Q "-1.0" bin/ffbarRead 500000 13000 0 E6-chi_m1500w80
+multirun.py -f 2 -t "_x25_y2-5_INT" -y 2.5 -m 1 -d -e -r 4000:5000 -Q "-1.0" bin/ffbarRead 500000 13000 0 E6-chi_m1500w80
+multirun.py -f 2 -t "_x25_y2-5_SQ"  -y 2.5 -m 2 -d    -r 5000:6000 -Q "-1.0" bin/ffbarRead 500000 13000 0 E6-chi_m1500w80
+multirun.py -f 2 -t "_x25_y2-5_INT" -y 2.5 -m 1 -d -e -r 5000:6000 -Q "-1.0" bin/ffbarRead 500000 13000 0 E6-chi_m1500w80
