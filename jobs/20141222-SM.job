@@ -1,0 +1,16 @@
+multirun.py -f 2 -t "_x25_y2-5_QDYN_EWSQ"  -y 2.5 -e -m 2 -d -r 200:500 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -t "_x25_y2-5_QDYN_EWINT" -y 2.5 -e -m 1 -d -r 200:500 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -t "_x25_y2-5_QDYN_EWSQ"  -y 2.5 -e -m 2 -d -r 500:1000 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -t "_x25_y2-5_QDYN_EWINT" -y 2.5 -e -m 1 -d -r 500:1000 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -t "_x25_y2-5_QDYN_EWSQ"  -y 2.5 -e -m 2 -d -r 1000:2000 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -t "_x25_y2-5_QDYN_EWINT" -y 2.5 -e -m 1 -d -r 1000:2000 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -t "_x25_y2-5_QDYN_EWSQ"  -y 2.5 -e -m 2 -d -r 2000:3000 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -t "_x25_y2-5_QDYN_EWINT" -y 2.5 -e -m 1 -d -r 2000:3000 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -t "_x25_y2-5_QDYN_EWSQ"  -y 2.5 -e -m 2 -d -r 3000:4000 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -t "_x25_y2-5_QDYN_EWINT" -y 2.5 -e -m 1 -d -r 3000:4000 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -t "_x25_y2-5_QDYN_EWSQ"  -y 2.5 -e -m 2 -d -r 4000:5000 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -t "_x25_y2-5_QDYN_EWINT" -y 2.5 -e -m 1 -d -r 4000:5000 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -t "_x25_y2-5_QDYN_EWSQ"  -y 2.5 -e -m 2 -d -r 5000:6000 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -t "_x25_y2-5_QDYN_EWINT" -y 2.5 -e -m 1 -d -r 5000:6000 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -t "_x25_y2-5_QDYN_EWSQ"  -y 2.5 -e -m 2 -d -r 6000:7000 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -t "_x25_y2-5_QDYN_EWINT" -y 2.5 -e -m 1 -d -r 6000:7000 -Q "-1" ffbarMultiZp 1000000 13000 0 SM

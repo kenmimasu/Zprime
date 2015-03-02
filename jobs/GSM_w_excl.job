@@ -1,0 +1,1 @@
+# multirun.py -d -f 2 -e -m 0 -y 2.5 -Q -1 -x 25 -r 1800:8000 bin/ffbarRead 50000 8000 0 GSM-SM_m2400w80

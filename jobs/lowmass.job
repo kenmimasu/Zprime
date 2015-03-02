@@ -1,0 +1,12 @@
+# multirun.py -f 2 -y 2.5 -x 25 -t "_INT" -m 1 -d -e -r 200:1000 -Q "-1" bin/ffbarMultiZp3G 50000 8000 0 TH1_5500
+# multirun.py -f 2 -y 2.5 -x 25 -t "_SQ"  -m 2 -d    -r 200:1000 -Q "-1" bin/ffbarMultiZp3G 50000 8000 0 TH1_5500
+# multirun.py -f 2 -y 2.5 -x 25 -t "_QDYN_EWINT" -e -m 1 -d -r 200:1000 -Q "-1" bin/ffbarMultiZp3G 100000 8000 0 SM
+# multirun.py -f 2 -y 2.5 -x 25 -t "_QDYN_EWSQ"  -e -m 2 -d -r 200:1000 -Q "-1" bin/ffbarMultiZp3G 100000 8000 0 SM
+# multirun.py -f 2 -y 2.5 -x 25 -t "_INT" -m 1 -d -e -r 120:200 -Q "-1" bin/ffbarMultiZp3G 50000 8000 0 TH1_5500
+# multirun.py -f 2 -y 2.5 -x 25 -t "_SQ"  -m 2 -d    -r 120:200 -Q "-1" bin/ffbarMultiZp3G 50000 8000 0 TH1_5500
+# multirun.py -f 2 -y 2.5 -x 25 -t "_QDYN_EWINT" -e -m 1 -d -r 120:200 -Q "-1" bin/ffbarMultiZp3G 100000 8000 0 SM
+# multirun.py -f 2 -y 2.5 -x 25 -t "_QDYN_EWSQ"  -e -m 2 -d -r 120:200 -Q "-1" bin/ffbarMultiZp3G 100000 8000 0 SM
+# multirun.py -f 2 -y 2.5 -x 25 -t "_INT" -m 1 -d -e -r 60:120 -Q "-1" bin/ffbarMultiZp3G 50000 8000 0 TH1_5500
+# multirun.py -f 2 -y 2.5 -x 25 -t "_SQ"  -m 2 -d    -r 60:120 -Q "-1" bin/ffbarMultiZp3G 50000 8000 0 TH1_5500
+# multirun.py -f 2 -y 2.5 -x 25 -t "_QDYN_EWINT" -e -m 1 -d -r 60:120 -Q "-1" bin/ffbarMultiZp3G 50000 8000 0 SM
+# multirun.py -f 2 -y 2.5 -x 25 -t "_QDYN_EWSQ"  -e -m 2 -d -r 60:120 -Q "-1" bin/ffbarMultiZp3G 50000 8000 0 SM

@@ -1,0 +1,4 @@
+# multirun.py -f 2 -y 2.5 -x 45 -t "_QDYN_EWSQ"  -e -m 2 -d -r 1350:2650 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -y 2.5 -x 45 -t "_QDYN_EWINT" -e -m 1 -d -r 1350:2650 -Q "-1" ffbarMultiZp 1000000 13000 0 SM
+multirun.py -f 2 -y 2.5 -x 45 -t "_SQ"  -m 2 -d    -r 1350:2650 -Q "-1" ffbarMultiZp 500000 13000 0 E6-psi_m1000
+multirun.py -f 2 -y 2.5 -x 45 -t "_INT" -m 1 -d -e -r 1350:2650 -Q "-1" ffbarMultiZp 500000 13000 0 E6-psi_m1000

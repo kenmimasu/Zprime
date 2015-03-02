@@ -1,0 +1,6 @@
+# multirun.py -f 2 -y 2.5 -x 25 -t "_QDYN_EWSQ"  -e -m 2 -d -r 200:500 -Q -1 bin/ffbarMultiZp3G 20000 13000 0 SM
+# multirun.py -f 2 -y 2.5 -x 25 -t "_QDYN_EWINT" -e -m 1 -d -r 200:500 -Q -1 bin/ffbarMultiZp3G 20000 13000 0 SM
+# multirun.py -f 2 -y 2.5 -x 25 -t "_QDYN_EWINT" -e -m 1 -d -r 1000:4000 -Q -1 bin/ffbarMultiZp3G 20000 13000 0 SM
+# multirun.py -f 2 -y 2.5 -x 25 -t "_QDYN_EWSQ"  -e -m 2 -d -r 1000:4000 -Q -1 bin/ffbarMultiZp3G 20000 13000 0 SM
+# multirun.py -f 2 -y 2.5 -x 25 -t "_QDYN_EWINT" -e -m 1 -d -r 500:1000 -Q -1 bin/ffbarMultiZp3G 20000 13000 0 SM
+# multirun.py -f 2 -y 2.5 -x 25 -t "_QDYN_EWSQ"  -e -m 2 -d -r 500:1000 -Q -1 bin/ffbarMultiZp3G 20000 13000 0 SM

@@ -1,0 +1,14 @@
+multirun.py -f 2 -t "_x25_y100_SQ"  -y 100 -m 2 -d    -r 200:500   -Q "-1.0" ffbarRead 500000 13000 0 GSM-SM_m1500w80
+multirun.py -f 2 -t "_x25_y100_INT" -y 100 -m 1 -d -e -r 200:500   -Q "-1.0" ffbarRead 500000 13000 0 GSM-SM_m1500w80
+multirun.py -f 2 -t "_x25_y100_SQ"  -y 100 -m 2 -d    -r 500:1000  -Q "-1.0" ffbarRead 500000 13000 0 GSM-SM_m1500w80
+multirun.py -f 2 -t "_x25_y100_INT" -y 100 -m 1 -d -e -r 500:1000  -Q "-1.0" ffbarRead 500000 13000 0 GSM-SM_m1500w80
+multirun.py -f 2 -t "_x25_y100_SQ"  -y 100 -m 2 -d    -r 1000:2000 -Q "-1.0" ffbarRead 500000 13000 0 GSM-SM_m1500w80
+multirun.py -f 2 -t "_x25_y100_INT" -y 100 -m 1 -d -e -r 1000:2000 -Q "-1.0" ffbarRead 500000 13000 0 GSM-SM_m1500w80
+multirun.py -f 2 -t "_x25_y100_SQ"  -y 100 -m 2 -d    -r 2000:3000 -Q "-1.0" ffbarRead 500000 13000 0 GSM-SM_m1500w80
+multirun.py -f 2 -t "_x25_y100_INT" -y 100 -m 1 -d -e -r 2000:3000 -Q "-1.0" ffbarRead 500000 13000 0 GSM-SM_m1500w80
+multirun.py -f 2 -t "_x25_y100_SQ"  -y 100 -m 2 -d    -r 3000:4000 -Q "-1.0" ffbarRead 500000 13000 0 GSM-SM_m1500w80
+multirun.py -f 2 -t "_x25_y100_INT" -y 100 -m 1 -d -e -r 3000:4000 -Q "-1.0" ffbarRead 500000 13000 0 GSM-SM_m1500w80
+multirun.py -f 2 -t "_x25_y100_SQ"  -y 100 -m 2 -d    -r 4000:5000 -Q "-1.0" ffbarRead 500000 13000 0 GSM-SM_m1500w80
+multirun.py -f 2 -t "_x25_y100_INT" -y 100 -m 1 -d -e -r 4000:5000 -Q "-1.0" ffbarRead 500000 13000 0 GSM-SM_m1500w80
+multirun.py -f 2 -t "_x25_y100_SQ"  -y 100 -m 2 -d    -r 5000:6000 -Q "-1.0" ffbarRead 500000 13000 0 GSM-SM_m1500w80
+multirun.py -f 2 -t "_x25_y100_INT" -y 100 -m 1 -d -e -r 5000:6000 -Q "-1.0" ffbarRead 500000 13000 0 GSM-SM_m1500w80
