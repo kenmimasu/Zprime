@@ -7,7 +7,7 @@ c generate distribution in sigp for ALL.
         else if(nbin.lt.1)then
           continue
         else
-          fxsigp(1,nbin,it)=fxsigp(1,nbin,it)+
+          fxsigp(iALL,nbin,it)=fxsigp(iALL,nbin,it)+
      &    (weight(it,+1,+1)+weight(it,-1,-1))
         end if
       end if  
@@ -20,7 +20,7 @@ c generate distribution in sigm for ALL.
         else if(nbin.lt.1)then
           continue
         else
-          fxsigm(1,nbin,it)=fxsigm(1,nbin,it)+
+          fxsigm(iALL,nbin,it)=fxsigm(iALL,nbin,it)+
      &    (weight(it,+1,-1)+weight(it,-1,+1))
         end if
       end if  

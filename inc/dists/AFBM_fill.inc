@@ -7,11 +7,11 @@ c generate distribution in sigp for AFBSTAR.
         else if(nbin.lt.1)then
           continue
         else
-            fxsigp(iAFBSTAR,nbin,it)=fxsigp(iAFBSTAR,nbin,it)+hist 
-            do j=1,8
+            fxsigp(iAFBM,nbin,it)=fxsigp(iAFBM,nbin,it)+hist 
+            do j=1,3
+                yecm =
               if(dabs(yff).gt.yffs(j))then
-                fxsigp(iAFBSTAR+j,nbin,it) = fxsigp(iAFBSTAR+j,nbin,it)
-     &                                     + hist
+                fxsigp(iAFBM+j,nbin,it)=fxsigp(iAFBM+j,nbin,it)+hist
               endif
             enddo 
         end if
@@ -25,11 +25,10 @@ c generate distribution in sigm for AFBSTAR.
         else if(nbin.lt.1)then
           continue
         else
-            fxsigm(iAFBSTAR,nbin,it)=fxsigm(iAFBSTAR,nbin,it)+hist 
-            do j=1,8
+            fxsigm(iAFBM,nbin,it)=fxsigm(iAFBM,nbin,it)+hist 
+            do j=1,3
               if(dabs(yff).gt.yffs(j))then
-                fxsigm(iAFBSTAR+j,nbin,it) = fxsigm(iAFBSTAR+j,nbin,it)
-     &                                     + hist
+                fxsigm(iAFBM+j,nbin,it)=fxsigm(iAFBM+j,nbin,it)+hist
               endif
             enddo
         end if

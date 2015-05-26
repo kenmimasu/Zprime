@@ -7,7 +7,7 @@ c generate distribution in sigp for AL.
         else if(nbin.lt.1)then
           continue
         else
-          fxsigp(2,nbin,it)=fxsigp(2,nbin,it)+
+          fxsigp(iAL,nbin,it)=fxsigp(iAL,nbin,it)+
      &    (weight(it,-1,-1)+weight(it,-1,+1))
         end if
       end if  
@@ -20,7 +20,7 @@ c generate distribution in sigm for AL.
         else if(nbin.lt.1)then
           continue
         else
-          fxsigm(2,nbin,it)=fxsigm(2,nbin,it)+
+          fxsigm(iAL,nbin,it)=fxsigm(iAL,nbin,it)+
      &    (weight(it,+1,-1)+weight(it,+1,+1))
         end if
       end if  

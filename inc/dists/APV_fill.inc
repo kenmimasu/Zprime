@@ -7,7 +7,7 @@ c generate distribution in sigp for APV.
         else if(nbin.lt.1)then
           continue
         else
-          fxsigp(3,nbin,it)=fxsigp(3,nbin,it)+
+          fxsigp(APV,nbin,it)=fxsigp(APV,nbin,it)+
      &    (weight(it,-1,-1))
         end if
       end if  
@@ -20,7 +20,7 @@ c generate distribution in sigm for APV.
         else if(nbin.lt.1)then
           continue
         else
-          fxsigm(3,nbin,it)=fxsigm(3,nbin,it)+
+          fxsigm(APV,nbin,it)=fxsigm(APV,nbin,it)+
      &    (weight(it,+1,+1))
         end if
       end if  

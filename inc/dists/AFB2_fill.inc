@@ -7,8 +7,8 @@ c generate distribution in sigp for AFB2.
         else if(nbin.lt.1)then
           continue
         else
-          fxsigp(7,nbin,it)=fxsigp(7,nbin,it)+hist1
-          fxsigm(7,nbin,it)=fxsigm(7,nbin,it)+hist2
+          fxsigp(iAFB2,nbin,it)=fxsigp(iAFB2,nbin,it)+hist1
+          fxsigm(iAFB2,nbin,it)=fxsigm(iAFB2,nbin,it)+hist2
         end if
       end if  
       if((m_sigm.eq.1).and.(cost4.lt.0.d0))then
@@ -20,7 +20,7 @@ c generate distribution in sigm for AFB2.
         else if(nbin.lt.1)then
           continue
         else
-          fxsigm(7,nbin,it)=fxsigm(7,nbin,it)+hist1
-          fxsigp(7,nbin,it)=fxsigp(7,nbin,it)+hist2
+          fxsigm(iAFB2,nbin,it)=fxsigm(iAFB2,nbin,it)+hist1
+          fxsigp(iAFB2,nbin,it)=fxsigp(iAFB2,nbin,it)+hist2
         end if
       end if  

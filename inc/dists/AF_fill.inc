@@ -7,7 +7,7 @@ c generate distribution in sigp for AF.
         else if(nbin.lt.1)then
           continue
         else
-          fxsigp(6,nbin,it)=fxsigp(6,nbin,it)+hist
+          fxsigp(iAF,nbin,it)=fxsigp(iAF,nbin,it)+hist
         end if
       end if
         
@@ -20,6 +20,6 @@ c generate distribution in sigm for AF.
         else if(nbin.lt.1)then
           continue
         else
-          fxsigm(6,nbin,it)=fxsigm(6,nbin,it)+hist
+          fxsigm(iAF,nbin,it)=fxsigm(iAF,nbin,it)+hist
         end if
       end if

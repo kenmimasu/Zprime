@@ -33,49 +33,49 @@ c plot distribution in asymmetries.
  1426   FORMAT('TITLE: "',A10,'(',F3.1,') Distribution"')
  1427   FORMAT('TITLE: "',A10,'(',F3.0,') Distribution"')
  1428   FORMAT('AXES: "',A6,' (GeV)" "',A10,'"')
-        if(jasy.eq.1)then
+        if(jasy.eq.iALL)then
               write(jh,*)'DSTRING: "ALL"'
               write(jh,1425)'A_{LL}'
               write(jh,1428)mff,'A_{LL}'
-        else if(jasy.eq.2)then
+        else if(jasy.eq.iAL)then
               write(jh,*)'DSTRING: "AL"'
               write(jh,1425)'A_{L}'
               write(jh,1428)mff,'A_{L}'
-        else if(jasy.eq.3)then
+        else if(jasy.eq.iAPV)then
               write(jh,*)'DSTRING: "APV"'
               write(jh,1425)'A_{PV}'
               write(jh,1428)mff,'A_{PV}'
-        else if(jasy.eq.4)then
+        else if(jasy.eq.iAFB2)then
               write(jh,*)'DSTRING: "AFB2"'
               write(jh,1425)'A_{FB}(CM)'
               write(jh,1428)mff,'A_{FB}'
-        else if(jasy.eq.5)then
+        else if(jasy.eq.iAC)then
               write(jh,*)'DSTRING: "AC"'
               write(jh,1426)'A_{C}',yc
               write(jh,1428)mff,'A_{C}'
-        else if(jasy.eq.6)then
+        else if(jasy.eq.iAF)then
               write(jh,*)'DSTRING: "AF"'
               write(jh,1426)'A_{F}',yc
               write(jh,1428)mff,'A_{F}'
-        else if(jasy.eq.7)then
+        else if(jasy.eq.iAFB)then
               write(jh,*)'DSTRING: "AFB"'
               write(jh,1425)'A_{FB}'
               write(jh,1428)mff,'A_{FB}'
-        else if(jasy.eq.8)then
+        else if(jasy.eq.iARFB)then
               write(jh,*)'DSTRING: "ARFB"'
               write(jh,1426)'A_{RFB}',yffcut
               write(jh,1428)mff,'A_{RFB}'
-        else if(jasy.eq.9)then
+        else if(jasy.eq.iAOFB)then
               write(jh,*)'DSTRING: "AOFB"'
               write(jh,1427)'A_{OFB}',pff
               write(jh,1428)mff,'A_{OFB}'
-        else if(jasy.eq.10)then
+        else if(jasy.eq.iAFBSTAR)then
               write(jh,*)'DSTRING: "AFBSTAR"'
               write(jh,1425)'A^{*}_{FB}'
               write(jh,1428)mff,'A^{*}_{FB}'
         end if
         do j=1,8
-          if(jasy.eq.(10+j))then
+          if(jasy.eq.(iAFBSTAR+j))then
             write(intstr,'(i1)') j 
             write(jh,*)'DSTRING: "AFBSTAR'//intstr//'"'
             write(jh,1426)'A^{*}_{FB}',yffs(j)

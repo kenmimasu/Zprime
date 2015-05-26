@@ -1,4 +1,3 @@
-
       data cost3min/-1d0/,cost3max/1d0/,ndiv_cost3/50/,m_cost3/0/
       data cost4min/-1d0/,cost4max/1d0/,ndiv_cost4/50/,m_cost4/0/
       data cost3colmin/-1d0/,cost3colmax/1d0/,ndiv_cost3col/50/
@@ -25,4 +24,8 @@
       data yc/0.5d0/, yffcut/0.5d0/, pzffcut/700d0/
       data yffs(1)/0d0/,yffs(2)/0.2d0/,yffs(3)/0.4d0/,yffs(4)/0.6d0/
       data yffs(5)/0.8d0/,yffs(6)/1.0d0/,yffs(7)/1.2d0/,yffs(8)/1.4d0/
-      data nasy/18/ ! number of asymmetry distributions defined
+      data nasy/19/ ! number of asymmetry distributions defined 
+      data iALL/1/,iAL/2/,iAPV/3/,iAFB2/4/,iAC/5/,iAF/6/,iAFB/7/
+     & iARFB/8/,iAOFB/9/,iAFBSTAR/10/,iAFBSTAR1/11/,iAFBSTAR2/12/
+     & iAFBSTAR3/13/,iAFBSTAR4/14/,iAFBSTAR5/15/,iAFBSTAR6/16/
+     & iAFBSTAR7/17/,iAFBSTAR8/18/,iAFBMINV/19/

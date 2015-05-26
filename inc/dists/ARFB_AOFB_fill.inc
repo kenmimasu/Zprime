@@ -7,9 +7,10 @@ c generate distribution in sigp for ARFB/AOFB.
         else if(nbin.lt.1)then
           continue
         else
-        if(dabs(yff).gt.yffcut)fxsigp(8,nbin,it)=fxsigp(8,nbin,it)+hist
-        if(dabs(pzff).gt.pzffcut)fxsigp(9,nbin,it)=fxsigp(9,nbin,it)
-     &                                                            +hist
+        if(dabs(yff).gt.yffcut)
+     &          fxsigp(iARFB,nbin,it)=fxsigp(iARFB,nbin,it) + hist
+        if(dabs(pzff).gt.pzffcut)
+     &          fxsigp(iAOFB,nbin,it)=fxsigp(iAOFB,nbin,it) + hist
         end if
       end if
         
@@ -22,8 +23,9 @@ c generate distribution in sigm for ARFB/AOFB.
         else if(nbin.lt.1)then
           continue
         else
-        if(dabs(yff).gt.yffcut)fxsigm(8,nbin,it)=fxsigm(8,nbin,it)+hist
-        if(dabs(pzff).gt.pzffcut)fxsigm(9,nbin,it)=fxsigm(9,nbin,it)
-     &                                                            +hist
+        if(dabs(yff).gt.yffcut)
+     &          fxsigm(iARFB,nbin,it)=fxsigm(iARFB,nbin,it) + hist
+        if(dabs(pzff).gt.pzffcut)
+     &          fxsigm(iAOFB,nbin,it)=fxsigm(iAOFB,nbin,it) + hist
         end if
       end if

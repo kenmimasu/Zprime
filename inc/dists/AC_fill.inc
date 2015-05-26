@@ -8,7 +8,7 @@ c generate distribution in sigp for AC.
         else if(nbin.lt.1)then
           continue
         else
-          fxsigp(5,nbin,it)=fxsigp(5,nbin,it)+hist
+          fxsigp(iAC,nbin,it)=fxsigp(iAC,nbin,it)+hist
         end if
       end if
       if((m_sigp.eq.1).and.(dabs(y4col).gt.yc))then
@@ -25,7 +25,7 @@ c generate distribution in sigm for AC.
         else if(nbin.lt.1)then
           continue
         else
-          fxsigm(5,nbin,it)=fxsigm(5,nbin,it)+hist
+          fxsigm(iAC,nbin,it)=fxsigm(iAC,nbin,it)+hist
         end if
       end if
       if((m_sigm.eq.1).and.(dabs(y3col).gt.yc))then

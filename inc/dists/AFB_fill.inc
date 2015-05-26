@@ -7,7 +7,7 @@ c generate distribution in sigp for AFB.
         else if(nbin.lt.1)then
           continue
         else
-          fxsigp(4,nbin,it)=fxsigp(4,nbin,it)+hist
+          fxsigp(iAFB,nbin,it)=fxsigp(iAFB,nbin,it)+hist
         end if
       end if  
       if((m_sigm.eq.1).and.(cost4col.lt.0.d0))then
@@ -19,6 +19,6 @@ c generate distribution in sigm for AFB.
         else if(nbin.lt.1)then
           continue
         else
-          fxsigm(4,nbin,it)=fxsigm(4,nbin,it)+hist
+          fxsigm(iAFB,nbin,it)=fxsigm(iAFB,nbin,it)+hist
         end if
       end if  
