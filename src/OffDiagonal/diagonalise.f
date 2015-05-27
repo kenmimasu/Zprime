@@ -4,7 +4,6 @@ c Routine implements diagonalisation of the matrix 2 propagator system,
 c outputting momentum dependent effective masses, widths and couplings 
 c to feed into HELAS subroutines
 c     IN
-c     real : p1(0:3),p2(0:3)        initial state madgraph momenta
 c     real : m(2),w(2,2)            masses and width matrix
 c     real : gi(2,2)                initial state couplings g(L/R,i)
 c     real : gf(2,2)                final state couplings g(L/R,i)

@@ -5,5 +5,8 @@ c Pzff bin size.
 c generate bin in Pzff.
         do i=1,ndiv_Pzff
           xPzff(i)=Pzffmin+Pzffw*(i-1)+Pzffw/2.d0
+          do it=1,20
+            fxPzff(i,it)=0d0
+          end do
         end do
       end if

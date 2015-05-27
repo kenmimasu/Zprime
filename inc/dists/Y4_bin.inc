@@ -5,5 +5,8 @@ c Y4 bin size.
 c generate bin in Y4.
         do i=1,ndiv_Y4
           xY4(i)=Y4min+Y4w*(i-1)+Y4w/2.d0
+          do it=1,20
+            fxY4(i,it)=0d0
+          end do
         end do
       end if

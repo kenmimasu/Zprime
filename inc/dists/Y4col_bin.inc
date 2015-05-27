@@ -5,5 +5,8 @@ c Y4col bin size.
 c generate bin in Y4col.
         do i=1,ndiv_Y4col
           xY4col(i)=Y4colmin+Y4colw*(i-1)+Y4colw/2.d0
+          do it=1,20
+            fxY4col(i,it)=0d0
+          end do
         end do
       end if

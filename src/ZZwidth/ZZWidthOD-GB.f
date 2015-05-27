@@ -57,7 +57,7 @@ c lepton.
                 gR(j) = gzzta(2,j)
             end if 
         enddo
-        if(mass(1).le.2.d0*rmq)goto 456
+        if(psq.le.2.d0*rmq)goto 456
         lambda=(psq-4d0*rmq**2)/psq
         tempZZ=sqrt(lambda)/24d0/pi*(gL(1)*gL(2)+gR(1)*gR(2))*
      &        (psq-rmq**2)

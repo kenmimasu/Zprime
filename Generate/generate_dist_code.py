@@ -95,6 +95,9 @@ for name in distnames:
     print_code('c generate bin in {0}.'.format(name),binning)
     print_code('        do i=1,ndiv_{0}'.format(name),binning)
     print_code('          x{0}(i)={0}min+{0}w*(i-1)+{0}w/2.d0'.format(name),binning)
+    print_code('          do it=1,20'.format(name),binning)
+    print_code('            fx{0}(i,it)=0d0'.format(name),binning)
+    print_code('          end do'.format(name),binning)
     print_code('        end do'.format(name),binning)
     print_code('      end if'.format(name),binning)
     

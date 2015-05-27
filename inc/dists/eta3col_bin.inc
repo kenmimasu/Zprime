@@ -5,5 +5,8 @@ c eta3col bin size.
 c generate bin in eta3col.
         do i=1,ndiv_eta3col
           xeta3col(i)=eta3colmin+eta3colw*(i-1)+eta3colw/2.d0
+          do it=1,20
+            fxeta3col(i,it)=0d0
+          end do
         end do
       end if

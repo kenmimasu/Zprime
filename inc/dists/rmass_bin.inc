@@ -5,5 +5,8 @@ c rmass bin size.
 c generate bin in rmass.
         do i=1,ndiv_rmass
           xrmass(i)=rmassmin+rmassw*(i-1)+rmassw/2.d0
+          do it=1,20
+            fxrmass(i,it)=0d0
+          end do
         end do
       end if

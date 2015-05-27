@@ -5,5 +5,8 @@ c eta3 bin size.
 c generate bin in eta3.
         do i=1,ndiv_eta3
           xeta3(i)=eta3min+eta3w*(i-1)+eta3w/2.d0
+          do it=1,20
+            fxeta3(i,it)=0d0
+          end do
         end do
       end if

@@ -5,5 +5,8 @@ c beta bin size.
 c generate bin in beta.
         do i=1,ndiv_beta
           xbeta(i)=betamin+betaw*(i-1)+betaw/2.d0
+          do it=1,20
+            fxbeta(i,it)=0d0
+          end do
         end do
       end if

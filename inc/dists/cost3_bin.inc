@@ -5,5 +5,8 @@ c cost3 bin size.
 c generate bin in cost3.
         do i=1,ndiv_cost3
           xcost3(i)=cost3min+cost3w*(i-1)+cost3w/2.d0
+          do it=1,20
+            fxcost3(i,it)=0d0
+          end do
         end do
       end if

@@ -4,8 +4,10 @@ c in a nearly degenerate 2 gauge boson system at scale psq.
       implicit real*8 (a-h,o-z)
       real*8 mass(10),width(10)
       real*8 p1(0:3),p2(0:3),psq
-      include 'ewparams.inc'
       include 'LRcoups.inc'
+      include 'ewparams.inc'
+      include 'ewcoups.inc'
+      
 c Locals
       real*8 gL(2),gR(2),lambda
 c Returns

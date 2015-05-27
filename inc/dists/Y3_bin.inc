@@ -5,5 +5,8 @@ c Y3 bin size.
 c generate bin in Y3.
         do i=1,ndiv_Y3
           xY3(i)=Y3min+Y3w*(i-1)+Y3w/2.d0
+          do it=1,20
+            fxY3(i,it)=0d0
+          end do
         end do
       end if

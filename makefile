@@ -44,6 +44,8 @@ ZZWIDTHREAD = ZZwidth-Read.o
 
 ZZWIDTHODREAD = ZZwidth-Read.o ZZwidthOD-Read.o
 
+ZZWIDTHODPDEPREAD = ZZwidth-Read.o ZZwidthOD-pdep-Read.o
+
 ZZWIDTH4DCHM= ZZwidth-4DCHM.o
 
 # Z' couplings: routine ZPCOUP()
@@ -51,6 +53,8 @@ ZZWIDTH4DCHM= ZZwidth-4DCHM.o
 ZPCOUP = MultiCouplings.o
 
 ZPCOUP3G = MultiCouplings-3G.o
+
+ZPCOUPODZ = MultiCouplings-OD-Z.o
 
 ZPCOUPAADDZA = MultiCouplings-AADD-ZA.o
 
@@ -87,13 +91,15 @@ SMCORRNONE = SMcorr-none.o
 SMCORR4DCHM = SMcorr-4DCHM.o
 
 # f f~ > Z' > F F~ matrix element
-
 BSMPROCESS =  qqb_ffb_multiZp_INT.o
 
-BSMPROCESSOD =  QQ_2V_FF_OD.o diagonalise.o # off diagonal propagator version (2 Z' system only)
+# off diagonal propagator version (2 Z' system only)
+BSMPROCESSOD =  QQ_2V_FF_OD.o diagonalise.o 
+
+# include SMZ as one of the system
+BSMPROCESSODZ =  QQ_ZV_FF_OD.o diagonalise.o 
 
 # determine q q~, g g > F F~ matrix elements
-
 ZPME = HelAmps.o
 
 ZPOD = HelAmps_OD.o
@@ -134,11 +140,7 @@ AF_fill.inc AFB2_fill.inc AOFB_tot.inc ARFB_AOFB_fill.inc AFBSTAR_fill.inc
 
 TOTASY = AFB_tot.inc AC_tot.inc AF_tot.inc AFB2_tot.inc ARFB_tot.inc AFBSTAR_tot.inc
 ############################################################
-# Global dependencies
-# GDEPS=$(MADGRAPH) $(VEGAS) $(HELAS) $(PDFS) $(SMPROCESS) $(patsubst %,inc/%, $(INCLUDE))
-GDEPS=$(MADGRAPH) $(VEGAS) $(HELAS) $(PDFS) $(SMPROCESS) 
-############################################################
-EXEC = ffbarMultiZp ffbarRead ffbarODRead \
+EXEC = ffbarMultiZp ffbarRead ffbarODRead ffbarODZRead \
 ffbarAADD_A ffbarAADD_Z ffbarAADD_B ffbarAADD_W ffbarAADD_WB ffbarAADD_ZA ffbarAADD_ZA_L1 \
 ffbarAADD_WB_L1 ffbarAADD_Fake ffbarAADD_Split ffbarAADD_Split_OD ffbarAADD_OD ffbarAADD_Fake_WB \
 ffbar4DCHM ffbarZpNu ffbarOne ffbarRead3G ffbarMultiZp3G
@@ -171,15 +173,19 @@ fxn.o fxn_sym.o: $(patsubst %,$(INCDIR)/%, $(FXNINC))
 HELOBJ =$(notdir $(patsubst  %.f, %.o, $(wildcard $(SRCDIR)/HelAmps/*.f)))
 $(HELOBJ): $(INCDIR)/runparams.inc $(INCDIR)/zpparams.inc $(INCDIR)/ewparams.inc
 
-WIDOBJ =$(notdir $(patsubst  %.f, %.o, $(wildcard $(SRCDIR)/HZZwidth/*.f)))
+WIDOBJ =$(notdir $(patsubst  %.f, %.o, $(wildcard $(SRCDIR)/ZZwidth/*.f)))
 $(WIDOBJ): $(INCDIR)/ewparams.inc $(INCDIR)/zpparams.inc $(INCDIR)/LRcoups.inc
 
 ZZwidthRead.o ZZwidthODRead.o: names.inc
 
 COUPOBJ =$(notdir $(patsubst  %.f, %.o, $(wildcard $(SRCDIR)/MultiCouplings/*.f)))
-$(COUPOBJ): $(INCDIR)/VAcoups.inc
-
+$(COUPOBJ): $(INCDIR)/VAcoups.inc  $(INCDIR)/ewparams.inc $(INCDIR)/zpparams.inc $(INCDIR)/LRcoups.inc
 ############################################################
+# Global dependencies
+# GDEPS=$(MADGRAPH) $(VEGAS) $(HELAS) $(PDFS) $(SMPROCESS) $(patsubst %,inc/%, $(INCLUDE))
+GDEPS=$(MADGRAPH) $(VEGAS) $(HELAS) $(PDFS) $(SMPROCESS) 
+############################################################
+
 all: $(patsubst %,$(BINDIR)/%, $(EXEC))
 
 bin/%:
@@ -197,6 +203,10 @@ bin/ffbarOne: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUP3G) $(ZPONE) $(SMCORRNONE
 bin/ffbarRead: $(MAIN) $(BSMPROCESS) $(ZZWIDTHREAD) $(ZPCOUP3G) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
 
 bin/ffbarODRead: $(MAIN) $(BSMPROCESSOD) $(ZZWIDTHODREAD) $(ZPCOUP3G) $(ZPOD) $(SMCORRNONE) $(FXN) $(GDEPS)
+
+bin/ffbarODZRead: $(MAIN) $(BSMPROCESSODZ) $(ZZWIDTHODREAD) $(ZPCOUPODZ) $(ZPOD) $(SMCORRNONE) $(FXN) $(GDEPS)
+
+bin/ffbarODZRead-pdep: $(MAIN) $(BSMPROCESSODZ) $(ZZWIDTHODPDEPREAD) $(ZPCOUPODZ) $(ZPOD) $(SMCORRNONE) $(FXN) $(GDEPS)
 
 bin/ffbar4DCHM: $(MAIN) $(BSMPROCESS) $(ZPCOUP4DCHM) $(ZZWIDTH4DCHM) $(ZPME) $(SMCORR4DCHM) $(FXN) $(GDEPS)
 

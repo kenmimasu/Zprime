@@ -5,5 +5,8 @@ c cost4col bin size.
 c generate bin in cost4col.
         do i=1,ndiv_cost4col
           xcost4col(i)=cost4colmin+cost4colw*(i-1)+cost4colw/2.d0
+          do it=1,20
+            fxcost4col(i,it)=0d0
+          end do
         end do
       end if

@@ -5,5 +5,8 @@ c Et bin size.
 c generate bin in Et.
         do i=1,ndiv_Et
           xEt(i)=Etmin+Etw*(i-1)+Etw/2.d0
+          do it=1,20
+            fxEt(i,it)=0d0
+          end do
         end do
       end if

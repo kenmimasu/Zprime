@@ -260,7 +260,7 @@ c compute matrix element
       CALL ME(gs,rmf,p1,p2,p3,p4,resgg,
      &      resqq,resqqalt,resuu,resuualt,resdd,resddalt,
      &      rescc,resccalt,resss,resssalt,resbb,resbbalt)
-ccccccccccccccccccccccc
+ccccccccccccccccccccccc      
 c initial luminosity for total unpolarised cross section.
       pfxtot=0.d0
       pfxalttot=0.d0
@@ -320,6 +320,7 @@ C histogram weights
       hist1=fxn1*wgt ! weight for q-qbar initial state
       hist2=fxn2*wgt ! weight for qbar-q initial state
       hist=hist1+hist2
+C       print*,hist
 cccccccccccccccccccccc
 c polarised cross sections.
       do iphel=-1,+1,2
