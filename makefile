@@ -1,4 +1,4 @@
-############################################################
+################################################################################
 FC = gfortran
 SRCDIR = src
 OBJDIR = obj
@@ -12,7 +12,7 @@ VPATH=$(SRCDIR)/main:$(OBJDIR):$(SRCDIR)/HelAmps:$(SRCDIR)/MatrixElements:\
 OUTPUT_OPTION= -o $(OBJDIR)/$@
 FFLAGS = -g -Wall -ffixed-form -I$(INCDIR) -I$(INCDIR)/dists
 
-############################################################
+################################################################################
 # main execs
 MAIN = ffbarMultiZp-3G.o
 
@@ -106,31 +106,36 @@ ZPOD = HelAmps_OD.o
 
 ZPONE = HelAmps_one.o # sets matrix element to 1 for checking phase space etc
 
-############################################################
+################################################################################
 # Include prerequisites 
-MAININC = vegas.inc ewparams.inc zpparams.inc runparams.inc names.inc VAcoups.inc \
-LRcoups.inc dists_common.inc asy_common.inc plotparams.inc dists_bin.inc dists_plot.inc asy_plot.inc
+MAININC = vegas.inc ewparams.inc zpparams.inc runparams.inc names.inc \
+VAcoups.inc LRcoups.inc dists_common.inc asy_common.inc plotparams.inc \
+dists_bin.inc dists_plot.inc asy_plot.inc
 
 FXNINC = vegas.inc ewparams.inc zpparams.inc runparams.inc dists_common.inc \
 asy_common.inc asy_tot.inc dists_fill.inc asy_fill.inc
 
 # Include files for plot management
-DISTDIST = pT_dist.inc Et_dist.inc Pzff_dist.inc delY_dist.inc Yff_dist.inc beta_dist.inc \
+DISTDIST =  \
+pT_dist.inc Et_dist.inc Pzff_dist.inc delY_dist.inc Yff_dist.inc beta_dist.inc \
 Y3_dist.inc Y3col_dist.inc Y4_dist.inc Y4col_dist.inc \
 cost3_dist.inc cost3col_dist.inc cost4_dist.inc cost4col_dist.inc \
 eta3_dist.inc eta3col_dist.inc eta4_dist.inc eta4col_dist.inc
 
-BINDIST = pT_bin.inc Et_bin.inc Pzff_bin.inc delY_bin.inc Yff_bin.inc beta_bin.inc \
+BINDIST = \
+pT_bin.inc Et_bin.inc Pzff_bin.inc delY_bin.inc Yff_bin.inc beta_bin.inc \
 Y3_bin.inc Y3col_bin.inc Y4_bin.inc Y4col_bin.inc \
 cost3_bin.inc cost3col_bin.inc cost4_bin.inc cost4col_bin.inc \
 eta3_bin.inc eta3col_bin.inc eta4_bin.inc eta4col_bin.inc
 
-FILLDIST = pT_fill.inc Et_fill.inc Pzff_fill.inc delY_fill.inc Yff_fill.inc beta_fill.inc \
+FILLDIST = \
+pT_fill.inc Et_fill.inc Pzff_fill.inc delY_fill.inc Yff_fill.inc beta_fill.inc \
 Y3_fill.inc Y3col_fill.inc Y4_fill.inc Y4col_fill.inc \
 cost3_fill.inc cost3col_fill.inc cost4_fill.inc cost4col_fill.inc \
 eta3_fill.inc eta3col_fill.inc eta4_fill.inc eta4col_fill.inc
 
-PLOTDIST = pT_plot.inc Et_plot.inc Pzff_plot.inc delY_plot.inc Yff_plot.inc beta_plot.inc \
+PLOTDIST = \
+pT_plot.inc Et_plot.inc Pzff_plot.inc delY_plot.inc Yff_plot.inc beta_plot.inc \
 Y3_plot.inc Y3col_plot.inc Y4_plot.inc Y4col_plot.inc \
 cost3_plot.inc cost3col_plot.inc cost4_plot.inc cost4col_plot.inc \
 eta3_plot.inc eta3col_plot.inc eta4_plot.inc eta4col_plot.inc
@@ -138,18 +143,19 @@ eta3_plot.inc eta3col_plot.inc eta4_plot.inc eta4col_plot.inc
 FILLASY = ALL_fill.inc AL_fill.inc APV_fill.inc AFB_fill.inc AC_fill.inc \
 AF_fill.inc AFB2_fill.inc AOFB_tot.inc ARFB_AOFB_fill.inc AFBSTAR_fill.inc
 
-TOTASY = AFB_tot.inc AC_tot.inc AF_tot.inc AFB2_tot.inc ARFB_tot.inc AFBSTAR_tot.inc
-############################################################
-EXEC = ffbarMultiZp ffbarRead ffbarODRead ffbarODZRead \
-ffbarAADD_A ffbarAADD_Z ffbarAADD_B ffbarAADD_W ffbarAADD_WB ffbarAADD_ZA ffbarAADD_ZA_L1 \
-ffbarAADD_WB_L1 ffbarAADD_Fake ffbarAADD_Split ffbarAADD_Split_OD ffbarAADD_OD ffbarAADD_Fake_WB \
-ffbar4DCHM ffbarZpNu ffbarOne ffbarRead3G ffbarMultiZp3G
-# HELOBJ = $(notdir, $($(wildcard src/HelAmps/*.f), .o=.f))
+TOTASY = AFB_tot.inc AC_tot.inc AF_tot.inc \
+AFB2_tot.inc ARFB_tot.inc AFBSTAR_tot.inc
 
-############################################################
+################################################################################
+EXEC = ffbarMultiZp ffbarRead ffbarODRead ffbarODZRead ffbarODZRead-pdep \
+ffbarAADD_A ffbarAADD_Z ffbarAADD_B ffbarAADD_W ffbarAADD_WB ffbarAADD_ZA \
+ffbarAADD_ZA_L1 ffbarAADD_WB_L1 ffbarAADD_Fake ffbarAADD_Split \
+ffbarAADD_Split_OD ffbarAADD_OD ffbarAADD_Fake_WB ffbar4DCHM ffbarZpNu ffbarOne 
+ffbarRead3G ffbarMultiZp3G
+################################################################################
 .PHONY: clean
 makefile: ;
-############################################################
+################################################################################
 # manage include file dependencies
 %.inc: 
 	touch $@
@@ -180,65 +186,84 @@ ZZwidthRead.o ZZwidthODRead.o: names.inc
 
 COUPOBJ =$(notdir $(patsubst  %.f, %.o, $(wildcard $(SRCDIR)/MultiCouplings/*.f)))
 $(COUPOBJ): $(INCDIR)/VAcoups.inc  $(INCDIR)/ewparams.inc $(INCDIR)/zpparams.inc $(INCDIR)/LRcoups.inc
-############################################################
+################################################################################
 # Global dependencies
 # GDEPS=$(MADGRAPH) $(VEGAS) $(HELAS) $(PDFS) $(SMPROCESS) $(patsubst %,inc/%, $(INCLUDE))
 GDEPS=$(MADGRAPH) $(VEGAS) $(HELAS) $(PDFS) $(SMPROCESS) 
-############################################################
+################################################################################
 
 all: $(patsubst %,$(BINDIR)/%, $(EXEC))
 
 bin/%:
 	$(eval DEPS=$(patsubst $(OBJDIR)/%,%,$^))
 	$(F77) $(FFLAGS) -o $@ $(patsubst %,$(OBJDIR)/%, $(DEPS))
-	
+
+################################################################################
+# Executables
+
+# Main executable for standard n Z' system with the possiblility of non 
+# universal couplings to 3rd generation fermions
 bin/ffbarMultiZp3G: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUP3G) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
 
+# Same as above but symmetrises integration over polar angle and CM frame boost 
+# for smoother distributions.
 bin/ffbarMultiZp3G_sym: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUP3G) $(ZPME) $(SMCORRNONE) $(FXNSYM) $(GDEPS)
 
+# Same as above but for universal couplings to all fermions
 bin/ffbarMultiZpUniv: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUP) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
 
+# PS integral testing executable that sets the ME to 1
 bin/ffbarOne: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUP3G) $(ZPONE) $(SMCORRNONE) $(FXN) $(GDEPS)
 
+# n Z' system where the width is read in from a text file rather than 
+# calculated from fermionic couplings
 bin/ffbarRead: $(MAIN) $(BSMPROCESS) $(ZZWIDTHREAD) $(ZPCOUP3G) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
 
+# 2 Z' system including off diagonal propagator effects betwee where the widths 
+# are read in
 bin/ffbarODRead: $(MAIN) $(BSMPROCESSOD) $(ZZWIDTHODREAD) $(ZPCOUP3G) $(ZPOD) $(SMCORRNONE) $(FXN) $(GDEPS)
 
+# 2 resonance system between a Z' and the SM Z including off diagonal 
+# propagator effects
 bin/ffbarODZRead: $(MAIN) $(BSMPROCESSODZ) $(ZZWIDTHODREAD) $(ZPCOUPODZ) $(ZPOD) $(SMCORRNONE) $(FXN) $(GDEPS)
 
+# 2 resonance system between a Z' and the SM Z including off diagonal 
+# propagator effects with their p-dependence
 bin/ffbarODZRead-pdep: $(MAIN) $(BSMPROCESSODZ) $(ZZWIDTHODPDEPREAD) $(ZPCOUPODZ) $(ZPOD) $(SMCORRNONE) $(FXN) $(GDEPS)
 
-bin/ffbar4DCHM: $(MAIN) $(BSMPROCESS) $(ZPCOUP4DCHM) $(ZZWIDTH4DCHM) $(ZPME) $(SMCORR4DCHM) $(FXN) $(GDEPS)
+# bin/ffbar4DCHM: $(MAIN) $(BSMPROCESS) $(ZPCOUP4DCHM) $(ZZWIDTH4DCHM) $(ZPME) $(SMCORR4DCHM) $(FXN) $(GDEPS)
+#
+# bin/ffbarZpNu: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPZPNU) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
+#
+# bin/ffbarAADD_ZA: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDZA) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
+#
+# bin/ffbarAADD_WB: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDWB) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
+#
+# bin/ffbarAADD_B: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDB) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
+#
+# bin/ffbarAADD_W: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDW) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
+#
+# bin/ffbarAADD_A: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDA) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
+#
+# bin/ffbarAADD_Z: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDZ) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
+#
+# bin/ffbarAADD_ZA_L1: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDZAL1) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
+#
+# bin/ffbarAADD_WB_L1: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDWBL1) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
+#
+# bin/ffbarAADD_Fake: $(MAIN) $(BSMPROCESS) $(ZPCOUPAADDFAKE) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
+#
+# bin/ffbarAADD_Fake_WB: $(MAIN) $(BSMPROCESS) $(ZPCOUPAADDFAKEWB) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
+#
+# bin/ffbarAADD_OD: $(MAIN) $(BSMPROCESSOD) $(ZZWIDTHOD) $(ZPCOUPAADDZA) $(ZPOD) $(SMCORRNONE) $(FXN) $(GDEPS)
+#
+# bin/ffbarAADD_Split: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDSPLIT) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
+#
+# bin/ffbarAADD_Split_OD: $(MAIN) $(BSMPROCESSOD) $(ZZWIDTHOD) $(ZPCOUPAADDSPLIT) $(ZPOD) $(SMCORRNONE) $(FXN) $(GDEPS)
 
-bin/ffbarZpNu: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPZPNU) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
-
-bin/ffbarAADD_ZA: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDZA) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
-
-bin/ffbarAADD_WB: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDWB) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
-
-bin/ffbarAADD_B: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDB) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
-
-bin/ffbarAADD_W: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDW) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
-
-bin/ffbarAADD_A: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDA) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
-
-bin/ffbarAADD_Z: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDZ) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
-
-bin/ffbarAADD_ZA_L1: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDZAL1) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
-
-bin/ffbarAADD_WB_L1: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDWBL1) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
-
-bin/ffbarAADD_Fake: $(MAIN) $(BSMPROCESS) $(ZPCOUPAADDFAKE) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
-
-bin/ffbarAADD_Fake_WB: $(MAIN) $(BSMPROCESS) $(ZPCOUPAADDFAKEWB) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
-
-bin/ffbarAADD_OD: $(MAIN) $(BSMPROCESSOD) $(ZZWIDTHOD) $(ZPCOUPAADDZA) $(ZPOD) $(SMCORRNONE) $(FXN) $(GDEPS)
-
-bin/ffbarAADD_Split: $(MAIN) $(BSMPROCESS) $(ZZWIDTH) $(ZPCOUPAADDSPLIT) $(ZPME) $(SMCORRNONE) $(FXN) $(GDEPS)
-
-bin/ffbarAADD_Split_OD: $(MAIN) $(BSMPROCESSOD) $(ZZWIDTHOD) $(ZPCOUPAADDSPLIT) $(ZPOD) $(SMCORRNONE) $(FXN) $(GDEPS)
-
+################################################################################
 clean:
 	rm -f $(OBJDIR)/*.o 
 	rm -f $(BINDIR)/* 
+################################################################################
 

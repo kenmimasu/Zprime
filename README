@@ -1,0 +1,213 @@
+###### Zprime code ######
+A collection of routines designed to calculate differential distributions for 
+the production of one or more Z's at colliders.
+Short descriptions of the executables can be found in makefile.
+
+The primary exectuable, bin/ffbarMultiZp3G allow the user to specify the 
+fermionic couplings of an n Z' system (up to 10) and calculate the total 
+cross section and bin differential distributions for their production at 
+collider experiments. 
+
+######## Running ########
+Use the provided command line script ./multirun to run the executable of 
+interest once it has been compiled and the relevant input files have been 
+created.
+
+Arguments:
+  executable            executable to run
+  ncall                 number of calls to VEGAS integrator. Quick and dirty is 
+                        around 10000 while precise, smoother plots are generated 
+                        for > 100000
+  ecm                   CM energy in GeV
+  icoll                 Collider type: O = Proton-proton, 1 = proton-antiproton
+  mdl                   Model file from which to read fermionic couplings. 
+                        Should be stored in Models/ directory and have the .mdl 
+                        extension
+
+  ./multirun --help
+
+Usage: multirun [options] executable ncall ecm icoll mdl
+Options:
+  -h, --help            show this help message and exit
+  -c, --cosx            symmetric cos theta and x sums
+  -d, --dists           write out distributions to log file
+  -s, --spit            output to stdout
+  -i, --iseed           used fixed seed
+  -r RANGE, --range=RANGE
+                        specify tuple of min and max energy range as 'min:max'
+  -t TAG, --tag=TAG     add specific tag to logfile name
+  -p PATH, --path=PATH  specify where to save log files
+  -y YCUT, --ycut=YCUT  rapidity cut
+  -x PTCUT, --ptcut=PTCUT
+                        pT cut
+  -m CONT, --cont=CONT  Specify BSM contribution: 0=ALL; 1=INTERFERENCE ONLY;
+                        2=SQUARES ONLY; 3=NONE
+  -P PDF, --pdf=PDF     PDF set: 1=CTEQ6M; 2=CTEQ6D; 3=CTEQ6L; 4=CTEQ6L1
+  -q, --qcd             Include QCD
+  -Q QFACT, --qfact=QFACT
+                        factorisation scale
+  -b, --bsm             remove Z's
+  -e, --ew              Include EW
+  -f FINAL, --final=FINAL
+                        Set final state: 0=ttbar 1=bbbar 2=epem 3=jj
+example:
+
+  ./multirun bin/ffbarMultiZp3G 50000 13000 0 E6-chi
+
+Would launch the bin/ffbarMultiZp3G with 50000 calls assuming a pp collider at 
+13 TeV, reading in the couplings from the file Models/E6-chi.mdl
+
+Sample model file for single Z' at 1.5 TeV with E6-chi couplings:
+
+1500d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0      ! Z prime mass
+0.760d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! gauge coupling g'
+0.00d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0      ! angle parametrising the mixing between Z's
+0.000d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of up type quark
+-0.316d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0    ! axial coupling of up type quark
+-0.632d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0    ! vector coupling of down type quark
+0.316d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of down type quark
+0.000d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of top quark
+-0.316d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0    ! axial coupling of top quark
+-0.632d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0    ! vector coupling of bottom quark
+0.316d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of bottom quark
+0.632d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of electron
+0.316d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of electron
+0.474d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of neutrino
+0.474d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of neutrino
+0.632d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of tau
+0.316d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of tau
+0.474d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! vector coupling of tau neutrino
+0.474d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0     ! axial coupling of tau neutrino
+
+The exectuables with Read in their name assume additional information is 
+read. e.g. ffbarRead also looks for a MODEL_widths.txt file in Models/. In the 
+previous example, using instead:
+
+  ./multirun bin/ffbarRead 50000 13000 0 E6-chi
+
+would read in the width from Models/E6-chi_widths.txt which should be formatted 
+as a list of 10 comma separated floats, e.g.
+
+    100d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0,0d0
+
+for a width of 100 GeV for the first Z'.
+
+The ffbarODRead executable also looks to read in the value for the off diagonal 
+width component between the two Z's, looking for a text file containing a 
+single float value, named  MODEL_ODwidths.txt.
+
+## Custom Distributions ##
+All plotting info is stored in the inc/ directory. In order to define a new 
+distribution to plot, say 'mydist', one should create the following files:
+
+mydist_bin.inc 
+mydist_dist.inc
+mydist_fill.inc
+mydist_plot.inc
+
+These can be copied from the templates below and modified according to your 
+needs. They should then each be included in their corresponding global 
+dists_*.inc files to be called in the right places in the executable. 
+
+in include/dists_common.inc:
+
+      include 'mydist_dist.inc'
+
+in include/dists_bin.inc:
+
+      include 'mydist_bin.inc'
+
+in include/dists_fill.inc:
+
+      include 'mydist_fill.inc'
+
+in include/dists_plot.inc:
+
+      include 'mydist_plot.inc'
+
+Any common variables declared such as mydistmax, mydistmin, mydistw in below 
+samples can be set using data statements in e.g. inc/plotparams.inc
+#########################
+Sample implementation
+inc/dists/mydist_dist.inc:
+c Common blocks declaration
+
+      real*8 mydistmax, mydistmin, mydistw ! range and binwidth commons
+      common/ext_mydist/mydistmax,mydistmin,mydistw
+      
+      real*8 xmydist(500),fxmydist(500,20),fxmydisttot(500) ! bin arrays
+      common/dist_mydist/xmydist,fxmydist,fxmydisttot
+      
+      integer m_mydist,ndiv_mydist ! ON/OFF switch and number of bins
+      common/inp_mydist/m_mydist
+      common/div_mydist/ndiv_mydist 
+
+add line in inc/plotparams.inc:
+c Set values for parameters
+    data mydistmin/-200d0/,mydistmax/200d0/,ndiv_mydist/100/,m_mydist/1/
+
+inc/dists/mydist_bin.inc:
+
+# Generate bin array x,y axes
+c check if switch is on or off
+      if(m_Y3col.eq.1)then
+c bin size.
+        mydistw=(mydistmax-mydistmin)/ndiv_mydist
+c generate bins.
+        do i=1,ndiv_mydist
+          xmydist(i)=mydistmin+mydistw*(i-1)+mydistw/2.d0 ! x-axis
+          do it=1,20
+            fxmydist(i,it)=0d0 ! y axis
+          end do
+        end do
+      end if
+
+inc/dists/mydist_fill.inc:
+
+# Called inside MC integration, fill distribution according to weight of phase 
+# space point, hist. The variable mydist should be calculated here as a 
+# function of available information i.e. particle four-momenta etc. See 
+# src/Required/fxn.f for some built-in examples.
+       
+      mydist = q(1,3) + q(1,4) ! sum of px of particle 3 and 4 in the lab frame
+      
+      if(m_mydist.eq.1)then
+c generate distribution in mydist.
+        nbin=int((mydist-mydistmin)/mydistw)+1
+        if(nbin.ge.(ndiv_mydist+1))then
+          continue
+        else if(nbin.lt.1)then
+          continue
+        else
+          fxmydist(nbin,it)=fxmydist(nbin,it)+hist
+        end if
+      end if
+
+inc/dists/mydist_plot.inc:
+
+      if(m_mydist.eq.1)then
+c plot distribution in mydist.
+        do j=1,ndiv_mydist
+          do i=1,it
+            fxmydist(j,i)=fxmydist(j,i)*avgi/cnorm(i)/mydistw
+          end do
+        end do
+        do j=1,ndiv_mydist
+          fxmydisttot(j)=0.d0 
+          do i=1,it
+            fxmydisttot(j)=fxmydisttot(j)+fxmydist(j,i)
+          end do
+        end do
+c Any preamble before writing out plot data
+        write(jh,*)'DISTRIBUTION:'
+        write(jh,*)'DSTRING: "mydist"'
+        write(jh,*)'TITLE: "px(3)+px(4)"'
+        write(jh,*)'AXES: "px34 (GeV)"',
+     &' "d{/Symbol s}/px34 (pb/GeV)"'
+        do i=1,ndiv_mydist
+          write(jh,964)xmydist(i),fxmydisttot(i)
+        end do
+        write(jh,*)'END'
+      end if
+#########################
+
